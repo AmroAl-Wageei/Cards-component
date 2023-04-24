@@ -1,0 +1,210 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+:root {
+  --Red: hsl(0, 78%, 62%);
+  --Cyan: hsl(180, 62%, 55%);
+  --Orange: hsl(34, 97%, 64%);
+  --Blue: hsl(212, 86%, 64%);
+
+  /* ### Neutral */
+
+  --Very-Dark-Blue: hsl(234, 12%, 34%);
+  --Grayish-Blue: hsl(229, 6%, 66%);
+  --Very-Light-Gray: hsl(0, 0%, 98%);
+
+  --padding: 10px;
+  --margin: 10px;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+  background-color: var(--Very-Light-Gray);
+}
+
+/* main {
+  background-color: rgb(255, 255, 255);
+  width: 600px;
+  height: auto;
+} */
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 100px;
+}
+
+header h1 {
+  font-weight: 200;
+}
+header h2 {
+  font-weight: 600;
+  font-size: 32px;
+}
+header p {
+  font-weight: 400;
+  text-align: center;
+  margin-top: 10px;
+  color: #aaaaaa;
+}
+
+@media (max-width: 767px) {
+  header h1 {
+    font-weight: 200;
+    font-size: 20px;
+    text-align: center;
+  }
+  header h2 {
+    font-weight: 400;
+    font-size: 24px;
+    text-align: center;
+  }
+  header p {
+    font-weight: 200;
+    font-size: 12px;
+    text-align: center;
+  }
+}
+
+main {
+  width: 100%;
+}
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  align-content: center;
+  margin: 50px auto;
+  width: calc(100% - 35%);
+}
+
+.container .box {
+  width: 300px;
+  height: 250px;
+  background-color: white;
+  border-top: 5px solid var(--Cyan);
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  justify-content: space-around;
+  padding: 15px;
+}
+.ss {
+  margin-top: 100px;
+  margin-left: 14px;
+}
+.container .box:last-child {
+  border-top: 5px solid var(--Blue);
+}
+
+.container .half .box:first-child {
+  border-top: 5px solid var(--Red);
+}
+.container .half .box:last-child {
+  border-top: 5px solid var(--Orange);
+}
+.container .box .info h3 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  font-size: 17px;
+}
+.container .box .info p {
+  color: #aaaaaa;
+  font-size: 13px;
+}
+
+.container .box .image {
+  display: flex;
+  justify-content: right;
+}
+.container .half {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+@media (max-width: 767px) {
+  main {
+    width: 100%;
+  }
+  .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    align-content: center;
+    margin: 50px auto;
+    width: calc(100% - 35%);
+  }
+  .container .half {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    align-content: center;
+  }
+  .ss {
+    margin-top: 0;
+    margin-left: 0;
+  }
+}
+@media (max-width: 900px) {
+  main {
+    width: 100%;
+  }
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    width: calc(100% - 35%);
+  }
+  .container .half {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    align-content: center;
+  }
+  .ss {
+    margin-top: 0;
+    margin-left: 0;
+  }
+}
+@media (max-width: 1285px) {
+  main {
+    width: 100%;
+  }
+  .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    align-items: center;
+    justify-content: center;
+    margin: 20px auto;
+    gap: 20px;
+    width: calc(100% - 35%);
+  }
+  .container .half {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    align-content: center;
+  }
+  .ss {
+    margin-top: 0;
+    margin-left: 0;
+  }
+}
